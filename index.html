@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabores de China</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #fff5e6, #fff0e0, #ffefdb);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite;
+      color: #333;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: linear-gradient(90deg, #b30000, #ffcc00);
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    .brand-name {
+      font-size: 2.2rem;
+      font-family: 'Pacifico', cursive;
+      letter-spacing: 1px;
+      color: #fffbe7;
+    }
+
+    .frase {
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #b30000;
+      margin: 30px 10px 10px;
+    }
+
+    .carousel {
+      width: 100%;
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .slides {
+      position: relative;
+      width: 100%;
+      height: 400px;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slides img.active {
+      opacity: 1;
+      position: relative;
+    }
+
+    .productos-destacados {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .productos-destacados h2 {
+      font-size: 2.2rem;
+      background: linear-gradient(90deg, #b30000, #ffcc00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 20px;
+    }
+
+    .grid-productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .producto {
+      background-color: #fffdf5;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .producto h3 {
+      margin: 10px;
+      color: #b30000;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #b30000, #ffcc00);
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .slides img {
+        height: 250px;
+      }
+      .brand-name {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo Sabores de China">
+    <span class="brand-name">Sabores de China</span>
+  </header>
+
+  <div class="frase">🥢 Descubre los auténticos sabores de la cocina china 🥢</div>
+
+  <section class="carousel">
+    <div class="slides">
+      <img src="img/comida2.jpeg" class="active">
+      <img src="img/comida1.jpeg">
+      <img src="img/comida3.jpeg">
+    </div>
+  </section>
+
+  <section class="productos-destacados">
+    <h2>Recetas Destacadas</h2>
+    <div class="grid-productos">
+      <div class="producto">
+        <a href="polloagridulce.html">
+          <img src="img/polloagridulce.jpeg" alt="Pollo Agridulce">
+          <h3>Pollo Agridulce</h3>
+        </a>
+        <p>Un clásico con salsa dulce y piña. Ideal para acompañar con arroz blanco.</p>
+      </div>
+      <div class="producto">
+        <a href="rollitos.html">
+          <img src="img/rollitos.jpeg" alt="Rollitos Primavera">
+          <h3>Rollitos Primavera</h3>
+        </a>
+        <p>Crujientes por fuera y suaves por dentro, rellenos de verduras frescas.</p>
+      </div>
+      <div class="producto">
+        <a href="arroz.html">
+          <img src="img/arroz.jpeg" alt="Arroz Frito">
+          <h3>Arroz Frito con Verduras</h3>
+        </a>
+        <p>Un plato versátil, lleno de color y sabor, listo en minutos.</p>
+      </div>
+      <div class="producto">
+        <a href="dumplings.html">
+          <img src="img/dumplings.jpg" alt="Dumplings">
+          <h3>Dumplings al Vapor</h3>
+        </a>
+        <p>Deliciosas empanaditas chinas rellenas de carne o verduras al vapor.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Sabores de China | Inspirando tu cocina oriental</p>
+    <p><a href="#">Volver arriba</a></p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slides img');
+    let index = 0;
+    function showNextSlide() {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }
+    setInterval(showNextSlide, 3000);
+  </script>
+</body>
+</html>
